@@ -4,7 +4,7 @@
 
 This repository provides the library code and scripts necessary to reproduce the results of our paper, currently available as a preprint at: TBA. The zip file `scripts_and_results.zip` provides pre-computed results, the scripts necessary to obtain them, and Jupyter Notebooks for their visualization.
 
-The library code implementes Lloyd's and Hartigan's k-Means in JAX and Numba, respectively.
+The library code implements Lloyd's and Hartigan's k-Means in JAX and Numba, respectively.
 
 ## Installation
 
@@ -14,7 +14,7 @@ The package can be installed with pip. If using a GPU for computations, install 
 pip install jax[cuda12]
 ```
 
-then install the package
+Then install the package
 
 ```bash
 python -m pip install .
