@@ -2,7 +2,7 @@
 
 ## Summary
 
-This repository provides the library code and scripts necessary to reproduce the results of our paper, currently available as a preprint at: TODO. The zip file `scripts_and_results.zip` provides pre-computed results, the scripts necessary to obtain them, and Jupyter Notebooks for their visualization.
+This repository provides the library code and scripts necessary to reproduce the results of our paper, currently available as a preprint at: TBA. The zip file `scripts_and_results.zip` provides pre-computed results, the scripts necessary to obtain them, and Jupyter Notebooks for their visualization.
 
 The library code implementes Lloyd's and Hartigan's k-Means in JAX and Numba, respectively.
 
