@@ -48,7 +48,6 @@ def _assign_label_hartigan_np(centroids, cluster_populations, data_point, label_
 
 @jit
 def _run_hartigan_numpy(data, init_centroids, max_iters):
-    max_iters = 100
 
     # Initial quantities
     labels = _assign_labels_lloyd_np(init_centroids, data)
