@@ -71,9 +71,12 @@ def run_sdp_clustering(data, n_clusters, max_iters=500, normalizes_data=True):
 
     prob.solve(solver=cp.SCS, verbose=False, max_iters=max_iters)
 
-    labels = sdp_rounding_vectorized(X.value @ data_normalized, n_clusters)
-    centroids = compute_centroids(data, labels, n_clusters)
-    loss = compute_loss(data, centroids, labels)
+    denoised = X.value
+    denoised = cast(np.ndarray, denoised)
+
+    labels = sdp_rounding_vectorized(denoised @ data_normalized, n_clusters)
+    centers = compute_centers(data, labels, n_clusters)
+    loss = compute_loss(data, centers, labels)
     num_iters = prob.solver_stats.num_iters
 
     return centroids, labels, loss, num_iters
